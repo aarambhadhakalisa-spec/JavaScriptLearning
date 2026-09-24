@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello World Loop</title>
+</head>
+<body>
+
+    <p id="output"></p>
+
+    <script>
+        function sayHello() {
+            for (let i = 0; i < 100; i++) {
+                document.getElementById("output").innerHTML += "<p>Hello world</p>";
+            }
+        }
+
+        sayHello();
+    </script>
+
+</body>
+</html>

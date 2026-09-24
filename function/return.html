@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Operations Output</title>
+</head>
+<body>
+
+    <h1>Math Operations Results</h1>
+
+    <p id="addition-result"></p>
+    <p id="subtraction-result"></p>
+    <p id="multiplication-result"></p>
+    <p id="division-result"></p>
+
+    <script>
+        let a = 10;
+        let b = 20;
+
+        function addition(a, b) {
+            return a + b;
+        }
+
+        let result = addition(a, b);
+        document.getElementById("addition-result").textContent = 
+            "The addition of the two numbers is " + result;
+
+        let c = 10;
+        let d = 20;
+
+        function subtraction(a, b) {
+            return a - b;
+        }
+
+        let result2 = subtraction(c, d);
+        document.getElementById("subtraction-result").textContent = 
+            "The subtraction of the two numbers is " + result2;
+
+        let e = 10;
+        let f = 20;
+
+        function multiplication(e, f) {
+            return e * f;
+        }
+
+        let result3 = multiplication(e, f);
+        document.getElementById("multiplication-result").textContent = 
+            "The product of the two numbers is " + result3;
+
+        let g = 10;
+        let h = 20;
+
+        function division(g, h) {
+            return g / h;
+        }
+
+        let result4 = division(g, h);
+        document.getElementById("division-result").textContent = 
+            "The division of the two numbers is " + result4;
+    </script>
+
+</body>
+</html>

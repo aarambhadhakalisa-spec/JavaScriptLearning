@@ -1,0 +1,59 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops</title>
+</head>
+
+<body>
+
+    <p id="output">Printing first 5 numbers<br></p>
+    <p id="even">Printing first 5 even numbers<br></p>
+    <p id="odd">Printing first 5 odd numbers<br></p>
+    <p id="numbers">Even or Odd:<br></p>
+
+    <script>
+        let i = 1;
+
+        do {
+            document.getElementById("output").innerHTML += i + "<br>";
+            i++;
+        } while (i <= 5);
+
+
+        let j = 2;
+
+        do {
+            document.getElementById("even").innerHTML += j + "<br>";
+            j += 2;
+        } while (j <= 10);                     
+
+
+        let x = 1;
+
+        do {
+            document.getElementById("odd").innerHTML += x + "<br>";
+            x += 2;
+        } while (x <= 9);
+
+
+        let b = 1;
+
+        do {
+            if (b % 2 == 0) {
+                document.getElementById("numbers").innerHTML += b + " Is Even<br>";
+            } else {
+                document.getElementById("numbers").innerHTML += b + " Is Odd<br>";
+            }
+
+            b++;
+
+        } while (b <= 20);
+
+    </script>
+
+</body>
+</html>
+```

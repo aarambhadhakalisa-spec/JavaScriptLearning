@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Largest Number Checker</title>
+</head>
+<body>
+
+  <h1 id="result"></h1>
+
+  <script>
+    let a = 15;
+    let b = 42;
+    let c = 27;
+
+    if (a >= b && a >= c) {
+      document.getElementById("result").innerHTML = a + " is the largest number";
+    } else if (b >= a && b >= c) {
+      document.getElementById("result").innerHTML = b + " is the largest number";
+    } else {
+      document.getElementById("result").innerHTML = c + " is the largest number";
+    }
+  </script>
+
+</body>
+</html>

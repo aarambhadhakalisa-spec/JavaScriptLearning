@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Interest Calculator</title>
+</head>
+<body>
+    <h1>Simple Interest Calculator</h1>
+    <p>Welcome to the Simple Interest Calculator!</p>
+
+    <p>Please enter the principal amount:</p>
+    <input type="number" id="principal" placeholder="Principal amount">
+
+    <p>Please enter the rate:</p>
+    <input type="number" id="rate" placeholder="Rate">
+
+    <p>Please enter the time:</p>
+    <input type="number" id="time" placeholder="Time">
+    <br>
+    <br>
+    
+
+    <button onclick="calculate()">Calculate</button>
+
+    <p id="result"></p>
+
+    <script>
+        function calculate() {
+            var principal = parseFloat(document.getElementById("principal").value);
+            var rate = parseFloat(document.getElementById("rate").value);
+            var time = parseFloat(document.getElementById("time").value);
+
+            var result = (principal * rate * time) / 100;
+
+            document.getElementById("result").innerText = "Simple Interest: " + result;
+        }
+
+    </script>
+
+    
+</body>
+</html>

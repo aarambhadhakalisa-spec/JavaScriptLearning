@@ -1,0 +1,23 @@
+What is function:
+- Functions are reusable code blocks designed for particular tasks
+
+Types of function:
+- Calling a function: To run the code inside a function, we have to its name followed with a ().
+
+- Return values: The return statement sends a value back and stops the function
+
+- Parameters: The placeholder ..... inside the definition (....).
+
+-Arguement: The actual value you pass when calling it eg: ("Aarambha").
+
+-callback function
+
+
+What is the importance of callback function?
+- Callback funciton lets you pass logic as an argument to another function, making the code  reusable.
+
+
+
+
+
+https://www.w3schools.com/js/js_functions.asp

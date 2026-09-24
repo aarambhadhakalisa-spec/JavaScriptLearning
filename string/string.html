@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Example</title>
+</head>
+<body>
+
+    <p id="demo"></p>
+    <p id="demo1"></p>
+
+    <script>
+        const name = "Ritesh Kumar";
+        const age = 25;
+        const city = "New Delhi";
+        const country = "India";
+
+        document.getElementById("demo").innerHTML = `Name: ${name} <br> Age: ${age} <br> City: ${city} <br> Country: ${country}`;
+        
+        document.getElementById("demo1").innerHTML = `Length of the string: ${name.length} <br> Length of the string: ${age.toString().length} <br> Length of the string: ${city.length} <br> Length of the string: ${country.length}`;
+    </script>
+</body>
+</html>

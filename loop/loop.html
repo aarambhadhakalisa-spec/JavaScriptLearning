@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops</title>
+</head>
+<body>
+    <p>Printing First 5 numbers</p>
+    <p id="first-five"></p>
+
+    <p>Printing First 5 even numbers</p>
+    <p id="first-even"></p>
+
+    <p>Printing First 5 odd numbers</p>
+    <p id="first-odd"></p>
+
+    <p>Printing numbers between 10-20</p>
+    <p id="number"></p>
+
+    <script>
+        let result = "";
+        for (let i = 1; i <= 5; i++) {
+            result += i + "<br>";
+        }
+        document.getElementById("first-five").innerHTML = result;
+
+        let text = "";
+        for (let i = 2; i <= 10; i += 2) {
+            text += i + "<br>";
+        }
+        document.getElementById("first-even").innerHTML = text;
+
+
+        let sigma = "";
+        for (let i = 1; i <= 9; i += 2) {
+            sigma += i + "<br>";
+        }
+        document.getElementById("first-odd").innerHTML = sigma;
+
+        let number = "";
+        for (let i = 10; i <= 20; i++) {
+            number += i + "<br>";
+        }
+        document.getElementById("number").innerHTML = number;
+    </script>
+</body>
+</html>
+
+
+
+
+<!-- While loop checks the condition before running the loop and may execute zero times. Its syntax is: while (condition).
+
+Do while loop runs the loop first and checks the condition after running. It executes at least one time. 
+Its syntax is: do { } while (condition); -->
