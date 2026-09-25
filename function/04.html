@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passing Values</title>
+</head>
+<body>
+    <h1>Passing values with function parameter</h1>
+
+    <p id = "demo"></p>
+        <p id = "demo2"></p>
+            <p id = "demo3"></p>
+                <p id = "demo4"></p>
+
+    <script>
+        function add(a,b) {
+            let result =  a + b;
+            document.getElementById("demo").innerHTML = "The addition of a and b is " + result;
+        }
+        add(10,20)
+
+         function subtract(a,b) {
+            let result =  a - b;
+            document.getElementById("demo2").innerHTML = "The subtraction of a and b is " + result;
+        }
+        subtract(10,20)
+
+         function multiply(a,b) {
+            let result =  a * b;
+            document.getElementById("demo3").innerHTML = "The product of a and b is " + result;
+        }
+        multiply(10,20)
+
+
+         function divide(a,b) {
+            let result =  a / b;
+            document.getElementById("demo").innerHTML = "The division of a and b is " + result;
+        }
+        divide(10,20)
+
+
+    </script>
+
+
+    
+</body>
+</html>
