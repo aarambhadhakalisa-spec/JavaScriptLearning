@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sum of Array</title>
+</head>
+<body>
+
+    <h1>Sum of Array</h1>
+
+    <p id="result"></p>
+
+    <script>
+        let array = [1, 2, 30, 70, 80, 500, 900];
+
+        function sum(a) {
+            let sum = 0;
+
+            for (let i = 0; i < a.length; i++) {
+                sum += a[i];
+            }
+
+            return sum;
+        }
+
+        let result = sum(array);
+
+        document.getElementById("result").textContent =
+            "The sum is: " + result;
+    </script>
+
+</body>
+</html>

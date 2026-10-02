@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Array Sum</title>
+</head>
+<body>
+
+    <h1>Array Sum</h1>
+
+    <p id="total"></p>
+    <p id="lastTwo"></p>
+
+    <script>
+        let array = [30, 50, 60, 133, 3333, 55555];
+
+        function sum(array) {
+
+            let sum = 0;
+
+            for (let i = 0; i < array.length; i++) {
+                sum += array[i];
+            }
+
+            return sum;
+        }
+
+        // Calculate the sum of the whole array
+        let result = sum(array);
+
+        // Get the last two numbers
+        let lastTwo = array.slice(-2);
+
+        // Calculate the sum of the last two numbers
+        let result2 = sum(lastTwo);
+
+        document.getElementById("total").textContent =
+            "Total Sum: " + result;
+
+        document.getElementById("lastTwo").textContent =
+            "Sum of Last Two Numbers: " + result2;
+    </script>
+
+</body>
+</html>
