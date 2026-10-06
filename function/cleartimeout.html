@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>setTimeout Example</title>
+</head>
+
+<body>
+
+    <h1>setTimeout Example</h1>
+
+    <p id="output"></p>
+
+    <script>
+
+        setTimeout(function() {
+
+            document.getElementById("output").innerHTML = "first<br>";
+
+        }, 0);
+
+
+        setTimeout(function() {
+
+            document.getElementById("output").innerHTML = "middle<br>";
+
+        }, 20000);
+
+
+        setTimeout(function() {
+
+            document.getElementById("output").innerHTML = "last<br>";
+
+        }, 3000);
+
+    </script>
+
+</body>
+</html>
