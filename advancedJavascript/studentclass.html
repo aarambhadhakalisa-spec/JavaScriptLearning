@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Details</title>
+</head>
+<body>
+    <p id="studentDetails"></p>
+    <p id="studentDetails1"></p>
+    <p id="studentDetails2"></p>
+
+    <script>
+        class Students {
+            constructor(name, age, city, grade, rollNo, percentage) {
+                this.name = name;
+                this.age = age;
+                this.city = city;
+                this.grade = grade;
+                this.rollNo = rollNo;
+                this.percentage = percentage;
+            }
+
+            studentDetails() {
+                return `The student is ${this.name}, a ${this.age}-year-old from ${this.city}. They are in grade ${this.grade} with roll number ${this.rollNo} and have a percentage of ${this.percentage}%.`;
+            }
+        }
+
+        const myStudent = new Students("Emily", 14, "London", "A", 1001, 92);
+        document.getElementById("studentDetails").textContent = myStudent.studentDetails();
+
+        const myStudent1 = new Students("Oliver", 15, "Glasgow", "B", 1002, 78);
+        document.getElementById("studentDetails1").textContent = myStudent1.studentDetails();
+
+        const myStudent2 = new Students("Sophia", 13, "Edinburgh", "A+", 1003, 96);
+        document.getElementById("studentDetails2").textContent = myStudent2.studentDetails();
+    </script>
+</body>
+</html>
+

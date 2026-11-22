@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Fetching data from file</h2>
+    <p id="demo">Loading data...</p>
+
+<script>
+    function fetchFile(file) {
+        fetch(file)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("File not found: " + response.status);
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById("demo").innerHTML = data;
+            })
+            .catch(error => {
+                console.log("Error:", error.message);
+                document.getElementById("demo").innerHTML = "Unable to load the file.";
+            });
+    }
+
+
+    fetchFile("01.txt");
+</script>
+
+    
+</body>
+</html>

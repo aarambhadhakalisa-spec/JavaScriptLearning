@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="project.css">
+</head>
+<body onload="pageLoaded()">
+    <div class="container">
+        <h1> Let's Go Shopping</h1>
+
+        <p id="welcomeMsg"></p>
+        <p id="productCount"></p>
+
+        <label for="product">Select a Product:</label>
+        <select id="product" onchange="showProductDetails()">
+            <option value="0">-- Choose a Product --</option>
+            <option value="80000">Laptop</option>
+            <option value="35000">Mobile</option>
+            <option value="5000">Headphones</option>
+            <option value="2500">Keyboard</option>
+            <option value="1000">Mouse</option>
+        </select>
+        <p id="selectedProductInfo"></p>
+
+        <label for="quantity">Enter Quantity:</label>
+        <input type="number" id="quantity" value="1" min="1" onchange="showQuantity()">
+        <p id="quantityInfo"></p>
+
+        <div class="button-group">
+            <button id="addBtn"
+                    onclick="addToCart()"
+                    onmouseover="mouseOverBtn()"
+                    onmouseout="mouseOutBtn()">Add to Cart</button>
+
+            <button id="resetBtn" onclick="resetCart()">Reset Cart</button>
+        </div>
+
+        <p id="result"></p>
+    </div>
+
+    <script>
+        function pageLoaded() {
+            document.getElementById("welcomeMsg").innerHTML = "Welcome to Our Shopping Store!";
+            document.getElementById("productCount").innerHTML = "Total Available Products: 5";
+        }
+
+        function showProductDetails() {
+            let product = document.getElementById("product");
+            let productName = product.options[product.selectedIndex].text;
+            let price = product.value;
+
+            if (product.value === "0") {
+                document.getElementById("selectedProductInfo").innerHTML = "";
+                return;
+            }
+
+            document.getElementById("selectedProductInfo").innerHTML =
+                "Selected Product: " + productName + "<br>Price per Product: Rs. " + price;
+        }
+
+        function showQuantity() {
+            let quantity = document.getElementById("quantity").value;
+
+            document.getElementById("quantityInfo").innerHTML =
+                "Selected Quantity: " + quantity;
+        }
+
+        function addToCart() {
+            let product = document.getElementById("product");
+            let productName = product.options[product.selectedIndex].text;
+            let price = Number(product.value);
+            let quantity = Number(document.getElementById("quantity").value);
+
+            let total = price * quantity;
+
+            document.getElementById("result").innerHTML =
+                "<strong>Cart Summary:</strong><br>" +
+                "Product Name: " + productName + "<br>" +
+                "Price per Product: Rs. " + price + "<br>" +
+                "Quantity: " + quantity + "<br>" +
+                "Total Amount: Rs. " + total;
+        }
+
+        function mouseOverBtn() {
+            let button = document.getElementById("addBtn");
+            button.innerHTML = "Ready to Add!";
+        }
+
+        function mouseOutBtn() {
+            let button = document.getElementById("addBtn");
+            button.innerHTML = "Add to Cart";
+        }
+
+        function resetCart() {
+            document.getElementById("product").selectedIndex = 0;
+            document.getElementById("quantity").value = 1;
+            document.getElementById("selectedProductInfo").innerHTML = "";
+            document.getElementById("quantityInfo").innerHTML = "";
+            document.getElementById("result").innerHTML = "";
+        }
+    </script>
+</body>
+</html>

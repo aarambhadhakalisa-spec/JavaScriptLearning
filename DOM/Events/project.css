@@ -1,0 +1,151 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(140deg, #0f766e 25%, #fff7ed 65%);
+    color: #1f2937;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 35px 40px;
+    border-radius: 16px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 460px;
+    border-top: 6px solid #f97316;
+}
+
+h1 {
+    text-align: center;
+    color: #134e4a;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 28px;
+    letter-spacing: 0.5px;
+}
+
+#welcomeMsg {
+    text-align: center;
+    color: #0f766e;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+#productCount {
+    display: block;
+    width: fit-content;
+    margin: 0 auto 24px auto;
+    background-color: #ffedd5;
+    color: #c2410c;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 4px 14px;
+    border-radius: 20px;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #134e4a;
+    font-size: 14px;
+}
+
+
+select:hover,
+input[type="number"]:hover {
+    border-color: #99d0c9;
+}
+
+select:focus,
+input[type="number"]:focus {
+    outline: none;
+    border-color: #0f766e;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.18);
+}
+
+#selectedProductInfo,
+#quantityInfo {
+    font-size: 14px;
+    color: #115e59;
+    background-color: #e6f7f4;
+    padding: 8px 12px;
+    border-radius: 6px;
+    margin-top: 8px;
+    margin-bottom: 18px;
+    border-left: 3px solid #14b8a6;
+}
+
+#selectedProductInfo:empty,
+#quantityInfo:empty {
+    display: none;
+}
+
+.button-group {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+button {
+    flex: 1;
+    padding: 13px;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+button:active {
+    transform: scale(0.97);
+}
+
+#addBtn {
+    background-color: #f97316;
+    color: white;
+    box-shadow: 0 4px 6px rgba(249, 115, 22, 0.3);
+}
+
+#addBtn:hover {
+    background-color: #ea580c;
+}
+
+#resetBtn {
+    background-color: #e6f7f4;
+    color: #115e59;
+}
+
+#resetBtn:hover {
+    background-color: #ccefe9;
+    color: #134e4a;
+}
+
+#result {
+    margin-top: 24px;
+    padding: 18px;
+    background-color: #fffaf5;
+    border: 1px solid #fdba74;
+    border-left: 5px solid #f97316;
+    border-radius: 8px;
+    line-height: 1.7;
+    font-size: 15px;
+    color: #7c2d12;
+    animation: fadeIn 0.3s ease;
+}
+
+#result:empty {
+    display: none;
+}
+

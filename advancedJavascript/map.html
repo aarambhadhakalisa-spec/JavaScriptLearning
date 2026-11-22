@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vegetable Map</title>
+</head>
+<body>
+
+    <h2>Vegetable Map</h2>
+    <p id="output"></p>
+
+    <script>
+        const vegetable = new Map([
+            ["name", "orange"],
+            ["name2", "watermelon"],
+            ["name3", "apple"],
+            ["name4", "mango"]
+        ]);
+
+        let result = "";
+
+        result += vegetable.delete("name") + "<br>";
+        result += vegetable.size + "<br>";
+        result += JSON.stringify([...vegetable]) + "<br>";
+
+        vegetable.set("name5", "bananna");
+
+        result += JSON.stringify([...vegetable]) + "<br>";
+        result += vegetable.get("name5");
+
+        document.getElementById("output").innerHTML = result;
+    </script>
+
+</body>
+</html>

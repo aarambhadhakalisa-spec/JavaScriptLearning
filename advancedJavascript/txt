@@ -1,0 +1,5 @@
+The DOM (Document Object Model) is a programming interface 
+that represents a web page as a tree-like structure of interconnected objects 
+
+An Event Listener is a built-in JavaScript method that "listens" 
+for a specific user interaction or browser occurrence (an event) on a DOM elemen

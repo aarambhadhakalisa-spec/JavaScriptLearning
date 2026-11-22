@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Car Speed</title>
+</head>
+<body>
+
+    <h1 id="speedDisplay">Current speed: 0</h1>
+
+    <button onclick="accelerate()">Press Pedal</button>
+    <button onclick="brake()">Press Brake</button>
+
+    <script>
+        class Car {
+            #speed = 0;
+            #maxSpeed = 200;
+
+            #changeSpeed(amount) {
+                this.#speed = Math.min(
+                    this.#maxSpeed,
+                    Math.max(0, this.#speed + amount)
+                );
+
+                this.#showSpeed();
+            }
+
+            #showSpeed() {
+                console.log("This car is moving at a speed of " + this.#speed);
+            }
+
+            pressPedal() {
+                this.#changeSpeed(10);
+            }
+
+            pressBrake() {
+                this.#changeSpeed(-10);
+            }
+
+            getSpeed() {
+                return this.#speed;
+            }
+        }
+
+        const myCar = new Car();
+
+        function updateScreen() {
+            document.getElementById("speedDisplay").innerText = "Current speed: " + myCar.getSpeed();
+        }
+
+        function accelerate() {
+            myCar.pressPedal();
+            updateScreen();
+        }
+
+        function brake() {
+            myCar.pressBrake();
+            updateScreen();
+        }
+    </script>
+
+</body>
+</html>

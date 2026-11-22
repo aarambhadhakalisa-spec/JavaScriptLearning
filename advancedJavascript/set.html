@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Set</title>
+</head>
+<body>
+
+    <h2>JavaScript Set</h2>
+    <p id="prasidda"></p>
+
+    <script>
+        const letter = new Set(["a", "b", "c", "c", "d", "e"]);
+
+        let result = "";
+
+        result += [...letter] + "<br>";
+
+        letter.add("f");
+        result += [...letter] + "<br>";
+
+        letter.delete("a");
+        result += [...letter] + "<br>";
+
+        result += letter.has("b") + "<br>";
+
+        letter.clear();
+        result += [...letter] + "<br>";
+
+        result += letter.size;
+
+        document.getElementById("prasidda").innerHTML = result;
+    </script>
+
+</body>
+</html>
+

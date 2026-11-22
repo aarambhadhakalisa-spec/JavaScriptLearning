@@ -1,0 +1,15 @@
+Event	Description
+onchange	An HTML element has been changed
+onclick	The user clicks an HTML element
+onmouseover	The user moves the mouse over an HTML element
+onmouseout	The user moves the mouse away from an HTML element
+onkeydown	The user pushes a keyboard key
+onload	The browser has finished loading the pages
+
+
+1. The DOM (Document Object Model)
+What it is: A programming interface that represents a web page (HTML or XML document) as a structured tree of objects.
+Role: It acts as a bridge between static HTML and dynamic scripting languages like JavaScript, allowing developers to dynamically access, modify, add, or delete elements, attributes, and styles on a webpage in real-time.
+2. Event Listeners
+What they are: Procedures or functions in JavaScript that "listen" or wait for specific events (such as a user clicking a button, hovering over an image, or pressing a keyboard key) to occur on a DOM element.
+Role: They enable interactive web experiences by triggering a designated callback function whenever the targeted event fires.   

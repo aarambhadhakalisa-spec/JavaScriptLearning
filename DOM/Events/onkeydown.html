@@ -1,0 +1,21 @@
+<!-- onKeyDown: it is used to handle the key down event when a key is pressed down. It can be used to trigger specific actions 
+or functions based on the key that was pressed. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnKeyDown</title>
+</head>
+<body>
+    <h1>OnKeyDown</h1>
+    <input type="text" id="myInput" onkeydown="showKey(event)">
+    <p id="demo"></p>
+    <script>
+        function showKey(event) {
+            document.getElementById("demo").innerHTML = "You pressed the " + event.key + " key";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Example</title>
+</head>
+<body>
+
+    <h2>Person Information</h2>
+
+    <p id="first"></p>
+    <p id="last"></p>
+    <p id="fullName"></p>
+    <p id="lang"></p>
+
+    <script>
+        const person = {
+            firstName: "John",
+            lastName: "Doe",
+            language: "en",
+
+            get lang() {
+                return this.language;
+            },
+
+            get first() {
+                return this.firstName;
+            },
+
+            get last() {
+                return this.lastName;
+            },
+
+            get fullName() {
+                return this.firstName + " " + this.lastName;
+            }
+        };
+
+        document.getElementById("first").textContent =
+            person.first;
+
+        document.getElementById("last").textContent =
+            person.last;
+
+        document.getElementById("fullName").textContent =
+            person.fullName;
+
+        document.getElementById("lang").textContent =
+            person.lang;
+    </script>
+
+</body>
+</html>

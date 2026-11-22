@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>On MouseOut Event</title>
+</head>
+
+<body>
+
+    <h1>On MouseOut</h1>
+
+    <p id="demo" onmouseover="showHello()" onmouseout="showWelcome()">
+        Welcome to JavaScript!
+    </p>
+
+    <script>
+        function showHello() {
+            document.getElementById("demo").innerHTML = "Hello!";
+        }
+
+        function showWelcome() {
+            document.getElementById("demo").innerHTML =
+                "Welcome to JavaScript!";
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salary Calculator</title>
+</head>
+<body>
+    <div class="salary-calculator">
+        <h2>Employee Salary Calculator</h2>
+
+        <p class="result1"></p>
+        <p class="result2"></p>
+        <p class="result3"></p>
+        <p class="result4"></p>
+        <p class="result5"></p>
+        <p class="result6"></p>
+    </div>
+
+    <script>
+        let basicSalary = 300000;
+        let allowance = 5000;
+        let tax = 3000;
+
+        let grossSalary = basicSalary + allowance;
+        let totalReduction = tax;
+        let totalSalary = grossSalary - totalReduction;
+
+        document.querySelector(".result1").innerHTML = "Basic Salary: " + basicSalary;
+        document.querySelector(".result2").innerHTML = "Allowance: " + allowance;
+        document.querySelector(".result3").innerHTML = "Tax: " + tax;
+        document.querySelector(".result4").innerHTML = "Gross Salary: " + grossSalary;
+        document.querySelector(".result5").innerHTML = "Total Reduction: " + totalReduction;
+        document.querySelector(".result6").innerHTML = "Total Salary: " + totalSalary;
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set example</title>
+</head>
+<body>
+
+    <p id="firstName"></p>
+    <p id="lastName"></p>
+
+    <script>
+        const person1 = {
+            firstName: "",
+            lastName: "",
+            language: "en",
+
+            set first(first) {
+                this.firstName = first;
+            },
+
+            set last(last) {
+                this.lastName = last;
+            }
+        };
+
+        person1.first = "Aarambha";
+        person1.last = "Dhakal";
+
+        const aarambha = person1.firstName;
+        const dhakal = person1.lastName;
+
+        document.getElementById("firstName").textContent = aarambha;
+        document.getElementById("lastName").textContent = dhakal;
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+//onchange: It is an event that occurs whenthe value of an element has been changed
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning about the event listener</title>
+</head>
+<body>
+    <h1>Event Listener</h1>
+    <input type="text" id="myInput" onchange="myWorld()">
+
+    <script>
+        function myWorld() {
+            let x = document.getElementById("myInput").value;
+            document.getElementById("demo").innerHTML= "You have entered; " + x;
+
+        }
+        
+    </script>
+    
+</body>
+</html>

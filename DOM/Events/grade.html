@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade calculator</title>
+</head>
+<body>
+
+   <h1>Student Marks Calculator</h1>
+<label for="name">Enter your name:</label>
+<input type="text" id="name" placeholder="Your Name"><br><br>
+<label for="marks">Enter your marks (0-100):</label>
+<input type="number" id="marks" placeholder="Your Marks"><br><br>
+<p id="message"></p>
+<button onclick="calculateGrade()">Calculate Grade</button>
+<input type="text" id="marks" onchange="displayMessage()">
+<p id="result"></p>
+
+    <script>
+        function calculateGrade() {
+            let marks = document.getElementById("marks").value;
+            let grade;
+
+            if (marks >= 90) {
+                grade = "A";
+            } else if (marks >= 80) {
+                grade = "B";
+            } else if (marks >= 70) {
+                grade = "C";
+            } else if (marks >= 60) {
+                grade = "D";
+            } else {
+                grade = "F";
+            }
+
+            document.getElementById("result").innerHTML = "Your grade is: " + grade;
+        }
+
+        function displayMessage() {
+            let marks = document.getElementById("marks").value;
+            document.getElementById("message").innerHTML = "You have entered: " + marks;
+        }
+    </script>
+    
+</body>
+</html>

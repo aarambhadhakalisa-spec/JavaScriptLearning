@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+</head>
+<body>
+    <h1>Shopping Cart</h1>
+
+    <label for="product">Select Product:</label>
+    <select id="product" onchange="showPrice()">
+        <option value="80000">Laptop</option>
+        <option value="35000">Mobile</option>
+        <option value="5000">Headphones</option>
+    </select><br><br>
+
+    <p id="priceDemo">Selected Price: Rs. 80000</p>
+
+    <label for="quantity">Enter Quantity:</label>
+    <input type="number" id="quantity" placeholder="Quantity" min="1" onchange="showQuantity()"><br><br>
+
+    <p id="quantityDemo"></p>
+
+    <button onclick="calculateTotal()">Add to Cart</button>
+    <button onclick="resetCart()">Reset Cart</button>
+
+    <p id="result"></p>
+
+    <script>
+        function showPrice() {
+            let product = document.getElementById("product");
+            let price = product.value;
+
+            document.getElementById("priceDemo").innerHTML =
+                "Selected Price: Rs. " + price;
+        }
+
+        function showQuantity() {
+            let quantity = document.getElementById("quantity").value;
+
+            document.getElementById("quantityDemo").innerHTML =
+                "Selected Quantity: " + quantity;
+        }
+
+        function calculateTotal() {
+            let product = document.getElementById("product");
+            let productName = product.options[product.selectedIndex].text;
+            let price = Number(product.value);
+            let quantity = Number(document.getElementById("quantity").value);
+
+            
+            let total = price * quantity;
+
+            document.getElementById("result").innerHTML =
+                "Selected Product: " + productName + "<br>" +
+                "Quantity: " + quantity + "<br>" +
+                "Total Amount: Rs. " + total;
+        }
+
+        function resetCart() {
+            document.getElementById("product").selectedIndex = 0;
+            document.getElementById("quantity").value = "";
+
+            document.getElementById("priceDemo").innerHTML =
+                "Selected Price: Rs. 80000";
+
+            document.getElementById("quantityDemo").innerHTML = "";
+            document.getElementById("result").innerHTML = "";
+        }
+    </script>
+</body>
+</html>

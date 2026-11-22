@@ -1,0 +1,1 @@
+Node.js is a JavaScript runtime environment that allows developers to execute JavaScript outside the browser. It provides built-in modules like fs, which help developers create, read, update, and delete files.
